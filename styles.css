@@ -1,0 +1,150 @@
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+}
+
+.container {
+    width: 1250px;
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 20px;
+}
+
+.nav-wrapper-home {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-image: url('images/phy_images/space-galaxy.png');
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-side {
+    display: flex;
+}
+.right-side> .brand {
+    display: inline-table;
+    
+}
+.right-side img{
+    height: 50px;
+    width: 100px;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+
+    height: 18px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+.content-wrapperMM {
+    margin: 10px;
+    max-width: 1750px;
+    padding: 15px;
+    border: 50px solid black; 
+    background-image: url('images/phy_images/space-galaxy.png');
+    color: aliceblue; 
+}
+.content-wrapperMMM {  /*spline*/
+  
+    max-width: 1750px;
+    padding: 15px;
+    border: 35px solid black; 
+    background-color: aliceblue;
+    
+}
+
+.content-w {
+    margin: auto;
+    max-width: 1300px;
+    padding: 15px;
+    border: 90px solid rgb(10, 1, 0);
+    border-image: url(images/phy_images/space-galaxy.png);
+    background-image: url(images/phy_images/space-galaxy.png);
+}
+.content-wrapperMM2 {
+    max-width: 1300px;
+    background-color: white;
+}
+.content-wrapperM {
+    margin: auto;
+    max-width: 1500px;
+     
+    border: 1px solid rgb(10, 1, 0);
+    grid-template-columns: 1fr 1fr;
+    background-color: aliceblue;
+    
+}
+
+     
+
+.two-column-wrapper {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen;
+}
+.profile-image-wrapp{
+    display: block;
+    background: padding-box;
+    margin-top: 0px;
+    text-align:start;
+    width:500px;
+    
+    
+}
+.profile-image-wrapp img {
+
+    float: left;    
+    caption-side: bottom;
+    margin: 35px 20px 10px 25px;
+    max-width: 100%;
+    height: 300px;
+}
+span{
+    color:crimson;
+    font-family: 'Satisfy', cursive;
+}
