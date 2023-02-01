@@ -71,7 +71,7 @@
 			<h2>Work</h2>
 		</header>
 		<p>
-			Hi! It's Humaira Binta Awal (Humu Pii). I'm an undergrad-senior student. Currently, majoring in Physics at the University of Dhaka. Besides my studies, I'm a self-learning programmer. Though I'm a noob, I have a great interest in simulation and computational physics. Visualization plays a vital role here. In our physics problems, for critical boundary conditions, we can't do all the experiments. Simulations are highly needed to make any kinda model before getting into any experiments with cost-convenient limitations and futile experiments. My interests grew on that basis. My small projects and workings are based on the visualization of simple physics models with developing and making innovations on handy tasks. The following are the simple projects that I completed on my learning journey. 
+			Hi! It's Humaira Binta Awal (Humu Pii). I'm an undergrad-senior student. Currently, majoring in Physics at the University of Dhaka. Besides my studies, I'm a self-learning programmer. Though I'm a noob, I have a great interest in simulation and computational physics. Visualization plays a vital role here. In our physics problems, for critical boundary conditions, we can't do all the experiments. Simulations are highly needed to make any kinda model before getting into any experiments with cost-convenient limitations and futile experiments. My interests grew on that basis. My small projects and workings are based on the visualization of simple physics models with developing and making innovations on handy tasks. The following are the simple projects that I completed on my learning journey. By clicking the images, you'll get to see the projects. 
 		</p>
 		<section>
 			<div class="row">
@@ -92,17 +92,62 @@
 		<div class="col-4 col-6-medium col-12-small">
 					<a href="phy_tool.html" class="image fit"><img src="images/webdev.png" alt=""></a>
 				</div>
-				<div class="col-4 col-6-medium col-12-small">
+		<div class="col-4 col-6-medium col-12-small">
 					<a href="https://humu-pii.github.io/HPii_Calculator/" class="image fit"><img src="images/cal.png" alt=""></a>
 				</div>
-				<div class="col-4 col-6-medium col-12-small">
+		<div class="col-4 col-6-medium col-12-small">
 					<a href="#" class="image fit"><img src="images/timer.gif" alt=""></a>
+					<div class="content-timer">
+        
+                
+						<button onclick="start()" id="start_button">Start</button>
+						<button onclick="stop()">Stop</button>
+						<button onclick="reset()">Reset</button>
+						<div id="time">0</div>
+						 
+						<script>
+						 var time = 0;
+						 var count_up = function(){
+					 
+							 if(keep_counting == true){
+									 time = time +1;
+									 document.getElementById('time').innerHTML = time;
+					 
+									 setTimeout(count_up,100);
+							 }
+							else{
+								keep_counting=true;
+								document.getElementById('start_button').disabled = false;
+					 
+							}
+						 }
+					 
+					 var start = function(){
+						 document.getElementById('start_button').disabled = true;
+					 
+						 count_up();
+					 }
+					 
+					 var keep_counting = true;
+					 
+						 var stop = function(){
+					 
+							 keep_counting= false;
+						 }
+					  var reset = function(){
+						  time =0;
+						  document.getElementById('time').innerHTML = time;
+					  }   
+				  </script>    
+							 
+				 
+				 </div>
 				</div>	
-				<div class="col-4 col-6-medium col-12-small">
+		<div class="col-4 col-6-medium col-12-small">
 					<a href="#" class="image fit"><img src="images/Idea_Bulb_animated.gif" alt=""></a>
-				</div>
-				
-			<div class="col-4 col-6-medium col-12-small">
+		        </div>
+	<!--Speech converter starts from here-->			
+		<div class="col-4 col-6-medium col-12-small">
 					
 				<style>
 					.container {
@@ -156,20 +201,15 @@
 							}
 						  }
 						</script>
-						</div>
-				
-
-
+					</div>
 				</div>
-
+<!--Tynker physics-->
 
 				<div class="col-4 col-6-medium col-12-small">
 					<a href="https://www.tynker.com/blog/tynker-toolbox-the-physics-blocks/" class="image fit"><img src="assets/css/images/QP.gif" alt=""></a>
 				</div>
 				
-<!--
-	extra pop up part
--->
+<!--  Matplotlib ,pop up part(used)  -->
 <style>
 	/* Popup container - can be anything you want */
 	.popup {
@@ -228,10 +268,10 @@
 	  to {opacity:1 ;}
 	}
 	</style>
-<!---->
 
-				<div class="col-4 col-6-medium col-12-small">
-					<a href="#" class="image fit"><img src="images/Gnuplot_logo.png" alt=""></a>
+
+			<div class="col-4 col-6-medium col-12-small">
+				<a href="#" class="image fit"><img src="images/Gnuplot_logo.png" alt=""></a>
 					<div class="popup" onclick="myFunction()">Click me to know about HP-project !
 						<span class="popuptext" id="myPopup"><i>Matplotlib 3D graphical animation!</i></span>
 					  </div>
@@ -243,12 +283,99 @@
 						}
 						</script>
 				</div>
-				<div class="col-4 col-6-medium col-12-small">
-					<a href="#" class="image fit"><img src="images/gnuplot.png" alt=""></a>
-				</div>
-			</div>
-								</section>
-								<p>All these front-end website codings along with logo making and mainly the above bijou projects are individually done by me. Some of the projects couldn't include for space limitations but I've worked on all of these fields in my physics problem based simulation and programming passage.</p>
+
+				<!--GNU plot overlay-->
+         <style>
+				.container {
+					position:relative;
+					width: 100%;
+					max-width: 255px;
+				  }
+				  
+				  .container img {
+					width: 100%;
+					height: auto;
+				  }
+			  #overlay {
+				position: fixed;
+				display: none;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 2;
+				cursor: pointer;
+			  }
+			  
+			  #text{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				font-size: 18px;
+				color: white;
+				transform: translate(-50%,-50%);
+				-ms-transform: translate(-50%,-50%);
+			  }
+			  
+		.caption{
+			position: absolute;
+			transform: translate(-50%, -200%);
+			-ms-transform: translate(-50%, -50%);
+			padding: 17px;
+			width: 70%;
+			left:140px;
+			border-radius: 30px;
+			text-align: left;
+			font-size: 14px;
+			text-align: center;
+		}
+		.btn{
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, -200%);
+			-ms-transform: translate(-60%, -50%);
+			background-color: coral;
+			color: white;
+			cursor: pointer;
+			padding: 8px;
+			width: 30%;
+			border-radius: 30px;
+			text-align: left;
+			font-size: 15px;
+			text-align: center;
+			
+		}
+			  </style>
+			 
+				  <div class="container">
+					  <div class="col-4 col-6-medium col-12-small">
+				  <a class="image fit"><img src="images/gnuplot.png" alt=""></a>
+			  <div id="overlay" onclick="off()">
+				<div id="text">In my computational physics course(PH-308), I have solved different physics problems on special funsions, ODE-problems, series-expansions and numerical analysis along with Monte Carlo simulations. In all of these problems, we used gnuplot from C++. It's really fun and interective to visualize the physical problems graphically.</div>
+			  </div>
+			  
+			  
+				<p class="caption"><font size="+1.2"><b>GNU Plot projects with C++</b></font></p>
+				<button class="btn" onclick="on()">GNU PLOT</button>
+			  
+			  </div>
+			  </div>
+			  <script>
+			  function on() {
+				document.getElementById("overlay").style.display = "block";
+			  }
+			  
+			  function off() {
+				document.getElementById("overlay").style.display = "none";
+			  }
+			  </script>
+
+		
+								
+								<p>All these front-end website codings along with logo making and mainly the above bijou projects are individually done by me. Many of the projects couldn't include here because of space limitations but I've worked on all of these fields in my physics problem-based simulation and programming passage. Though all these are elementary projects, I've started from the very basics. </p>
 							</article>
 
 						<!-- Contact -->

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  
+  .container {
+      position:relative;
+      width: 100%;
+      max-width: 255px;
+    }
+    
+    .container img {
+      width: 100%;
+      height: auto;
+    }
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 15px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.caption{
+	    position: relative;
+      left: 50%;
+      transform: translate(-50%, -250%);
+      -ms-transform: translate(-50%, -50%);
+      padding: 8px;
+      width: 80%;
+      background-color: rgb(208, 119, 246);
+      color: azure;
+      border-radius: 30px;
+      text-align: left;
+      font-size: 15px;
+      text-align: center;
+      opacity: 85%;
+}
+.btn{
+	 position: relative;
+      left: 50%;
+      transform: translate(-50%, -350%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: coral;
+      color: white;
+      cursor: pointer;
+      padding: 8px;
+      width: 30%;
+      border-radius: 30px;
+      text-align: left;
+      font-size: 15px;
+      text-align: center;
+	  opacity: 70%;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-4 col-6-medium col-12-small">
+    <a class="image fit"><img src="images/gnuplot.png" alt=""></a>
+<div id="overlay" onclick="off()">
+  <div id="text">In my computational physics course(PH-308), I have solved different physics problems on special funsions, ODE-problems, series-expansions and numerical analysis with Monte Carlo simulations. In all of these problems, we used gnuplot from C++. It's really fun and interective to visualize the physical problems graphically.</div>
+</div>
+
+<div style="padding: 5px;">
+  <p class="caption">GNU Plot projects with C++</p>
+  <button class="btn" onclick="on()">GNU PLOT</button>
+</div>
+</div>
+</div>
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+   
+</body>
+</html> 
+
+
+
+<!---->
+<style>
+  .container {
+     position:relative;
+     width: 100%;
+     max-width: 255px;
+   }
+   
+   .container img {
+     width: 100%;
+     height: auto;
+   }
+   .collapsible {
+     position: relative;
+     left: 50%;
+     transform: translate(-50%, -300%);
+     -ms-transform: translate(-30%, -50%);
+     background-color: coral;
+     color: white;
+     cursor: pointer;
+     padding: 8px;
+     width: 40%;
+     border-radius: 30px;
+     text-align: left;
+     font-size: 15px;
+     text-align: center;
+   opacity: 70%;
+   }
+   
+   .active1, .collapsible:hover {
+     background-color: cyan;
+   }
+   
+   .content-gnu {
+     padding: 0 18px;
+     display: none;
+     overflow: hidden;
+     background-color: azure;
+   }
+         </style>
+
+                 <div class="container">
+           <div class="col-4 col-6-medium col-12-small"></div>
+         <a class="image fit"><img src="images/gnuplot.png" alt=""></a>
+         <button type="button" class="collapsible">GNU Plot</button>
+           <div class="content-gnu">
+             <p>In my computational physics course(PH-308), I have solved different physics problems on special funsions, ODE-problems, series-expansions and numerical analysis with Monte Carlo simulations. In all of these problems, we used gnuplot from C++. It's really fun and interective to visualize the physical problems graphically. </p>
+           </div>
+           <script>
+             var coll = document.getElementsByClassName("collapsible");
+             var i;
+             
+             for (i = 0; i < coll.length; i++) {
+               coll[i].addEventListener("click", function() {
+               this.classList.toggle("active1");
+               var content = this.nextElementSibling;
+               if (content.style.display === "block") {
+                 content.style.display = "none";
+               } else {
+                 content.style.display = "block";
+               }
+               });
+             }
+             </script>
+       </div>
+     </div>
