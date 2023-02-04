@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>HP portfolio</title>
+		<title>HP's portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -82,11 +82,104 @@
 				<div class="col-4 col-6-medium col-12-small">
 					<a href="https://humu-pii.github.io/BMI_Calculator/" class="image fit"><img src="images/bmi_calc.png" alt=""></a>
 				</div>
+				<!--start of jupiter notebook-->
+				
+				<style>
+    
+	.container {
+	  position:relative;
+	  width: 100%;
+	  max-width: 255px;
+	  }
+	  
+	  .container img {
+	  width: 100%;
+	  height: auto;
+	  }
+	#overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	cursor: pointer;
+	}
+	
+	#text1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 18px;
+	color: white;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	}
+	
+.caption{
+  position: absolute;
+  transform: translate(-50%, -200%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 17px;
+  width: 70%;
+  left:140px;
+  border-radius: 30px;
+  text-align: left;
+  font-size: 14px;
+  text-align: center;
+}
+.btn{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  -ms-transform: translate(-60%, -50%);
+  background-color: coral;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  width: 20%;
+  border-radius: 30px;
+  text-align: left;
+  outline:none;
+  font-size: 12px;
+  text-align: center;
+  opacity: 80%;
+  
+}
+	</style>
+   
+	  <div class="container">
+		<div class="col-4 col-6-medium col-12-small">
+	  <a class="image fit"><img src="images/jupy logo.gif" alt=""></a>
+	<div id="overlay" onclick="off()">
+	<div id="text1">With the help of Jupyter Notebook, different problems of computational physics are solved in python programming language. Some of these are attached here: 
+	  <ul><li>Spherical Bessel Function in 3D plotting<a href="https://github.com/Humu-Pii/Spherical_BesselFunc/blob/main/Spherical%20Bessel.ipynb">==>Click Here.</a></li>
+		  <li><a href="https://github.com/Humu-Pii/Spherical_BesselFunc/blob/main/Spherical%20Bessel.ipynb"> Spherical Bessel Function in 3D plotting</a></li>
+		
+		 
+	  </ul>
+	   </div>
+	</div>
+	<button class="btn" onclick="on()">Jupyter</button>
+	
+	</div>
+	</div>
+	<script>
+	function on() {
+	document.getElementById("overlay").style.display = "block";
+	}
+	
+	function off() {
+	document.getElementById("overlay").style.display = "none";
+	}
+	</script>
+				<!--end-->
 				<div class="col-4 col-6-medium col-12-small">
-					<a href="https://www.glowscript.org/#/user/humu.pii786/folder/MyPrograms/program/Thinfilm" class="image fit"><img src="images/jupy logo.gif" alt=""></a>
-				</div>
-				<div class="col-4 col-6-medium col-12-small">
-					<a href="#" class="image fit"><img src="images/vpro-unscreen.gif" alt=""></a>
+					<a href="https://www.glowscript.org/#/user/humu.pii786/folder/MyPrograms/program/Thinfilm" class="image fit"><img src="images/vpro-unscreen.gif" alt=""></a>
 				</div>
 			
 			
