@@ -71,7 +71,7 @@
 		<header>
 			<h2>Work</h2>
 		</header>
-		<p>
+		<p align="justify">
 			Hi! It's Humaira Binta Awal (Humu Pii). I'm an undergrad-senior student. Currently, majoring in Physics at the University of Dhaka. Besides my studies, I'm a self-learning programmer. Though I'm a noob, I have a great interest in simulation and computational physics. Visualization plays a vital role here. In our physics problems, for critical boundary conditions, we can't do all the experiments. Simulations are highly needed to make any kinda model before getting into any experiments with cost-convenient limitations and futile experiments. My interests grew on that basis. My small projects and workings are based on the visualization of simple physics models with developing and making innovations on handy tasks. The following are the simple projects that I completed on my learning journey. By clicking the images, you'll get to see the projects. 
 		</p>
 		<section>
@@ -83,21 +83,21 @@
 					<a href="https://humu-pii.github.io/BMI_Calculator/" class="image fit"><img src="images/bmi_calc.png" alt=""></a>
 				</div>
 				<!--start of jupiter notebook-->
-				
 				<style>
     
-	.container {
+	.container-jp {
 	  position:relative;
 	  width: 100%;
 	  max-width: 255px;
 	  }
 	  
-	  .container img {
+	.container-jp img {
 	  width: 100%;
 	  height: auto;
 	  }
-	#overlay {
-	position: fixed;
+
+	#overlay-jp {
+	position: relative;
 	display: none;
 	width: 100%;
 	height: 100%;
@@ -120,64 +120,112 @@
 	-ms-transform: translate(-50%,-50%);
 	}
 	
-.caption{
-  position: absolute;
-  transform: translate(-50%, -200%);
-  -ms-transform: translate(-50%, -50%);
-  padding: 17px;
-  width: 70%;
-  left:140px;
-  border-radius: 30px;
-  text-align: left;
-  font-size: 14px;
-  text-align: center;
+span{
+  top:-100px;
 }
 .btn{
   position: relative;
-  left: 50%;
-  transform: translate(-50%, -300%);
-  -ms-transform: translate(-60%, -50%);
-  background-color: coral;
+  left: 35%;
+  background-color: rgb(80, 229, 255);
   color: white;
-  cursor: pointer;
-  padding: 8px;
-  width: 20%;
-  border-radius: 30px;
-  text-align: left;
-  outline:none;
-  font-size: 12px;
+  padding: 5px;
+  border-radius: 15px;
   text-align: center;
   opacity: 80%;
-  
+  border: none;
+}
+.btn:hover{
+  background-color: aquamarine;
 }
 	</style>
-   
-	  <div class="container">
-		<div class="col-4 col-6-medium col-12-small">
-	  <a class="image fit"><img src="images/jupy logo.gif" alt=""></a>
-	<div id="overlay" onclick="off()">
-	<div id="text1">With the help of Jupyter Notebook, different problems of computational physics are solved in python programming language. Some of these are attached here: 
-	  <ul><li>Spherical Bessel Function in 3D plotting<a href="https://github.com/Humu-Pii/Spherical_BesselFunc/blob/main/Spherical%20Bessel.ipynb">==>Click Here.</a></li>
-		  <li>Euler method for ODE-problem<a href="https://github.com/Humu-Pii/Euler_method-ODE/blob/main/Euler%20method%20to%20solve%20ODE.ipynb">Click Here.</a></li>
-		  <li>Monte Carlo Dice game simulation<a href="https://github.com/Humu-Pii/Monte-carlo-dice/blob/main/Monte%20Carlo.ipynb"> Click here</a></li>
-		
-		 
-	  </ul>
-	   </div>
-	</div>
-	<button class="btn" onclick="on()">Jupyter</button>
+
+<div id="Jup" class="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div class="overlay-content">
+<p>With the help of Jupyter Notebook, different problems of computational physics are solved in python programming language. Some of these are attached here:</p>
+<a href="https://github.com/Humu-Pii/Spherical_BesselFunc/blob/main/Spherical%20Bessel.ipynb">Spherical Bessel Function in 3D plotting</a>
+<a href="https://github.com/Humu-Pii/Euler_method-ODE/blob/main/Euler%20method%20to%20solve%20ODE.ipynb">Euler method for ODE-problem</a>
+<a href="https://github.com/Humu-Pii/Monte-carlo-dice/blob/main/Monte%20Carlo.ipynb">Monte Carlo dice game simulation</a>
+<!-- <a href="#">Contact</a> -->
+</div>
+</div>
+
+<div class="container-jp">
+<div class="col-4 col-6-medium col-12-small">
+   <a class="image fit"><img src="images/jupy logo.gif" alt=""></a>
+	
+	<span class="btn" style="font-size:15px;cursor:pointer" onclick="openNav()">&#9776; Jupyter</span>
+	
 	
 	</div>
+	
 	</div>
+
 	<script>
-	function on() {
-	document.getElementById("overlay").style.display = "block";
-	}
-	
-	function off() {
-	document.getElementById("overlay").style.display = "none";
-	}
-	</script>
+	  function openNav() {
+		document.getElementById("Jup").style.width = "100%";
+	  }
+	  
+	  function closeNav() {
+		document.getElementById("Jup").style.width = "0%";
+	  }
+	  </script>
+<style>
+body {
+font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0, 0.9);
+overflow-x: hidden;
+transition: 0.5s;
+}
+
+.overlay-content {
+position: relative;
+top: 25%;
+width: 100%;
+text-align: center;
+margin-top: 30px;
+color: rgb(144, 247, 242);
+}
+
+.overlay a {
+padding: 8px;
+text-decoration: none;
+font-size: 30px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+color: #f1f1f1;
+}
+
+.overlay .closebtn {
+position: absolute;
+top: 20px;
+right: 45px;
+font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+font-size: 30px;
+top: 15px;
+right: 35px;
+}
+}
+</style>
 				<!--end-->
 				<div class="col-4 col-6-medium col-12-small">
 					<a href="https://www.glowscript.org/#/user/humu.pii786/folder/MyPrograms/program/Thinfilm" class="image fit"><img src="images/vpro-unscreen.gif" alt=""></a>
@@ -470,7 +518,7 @@
 
 		
 								
-								<p>All these front-end website codings along with logo making and mainly the above bijou projects are individually done by me. Many of the projects couldn't include here because of space limitations but I've worked on all of these fields in my physics problem-based simulation and programming passage. Though all these are elementary projects, I've started from the very basics. </p>
+								<p align="justify">All these front-end website codings along with logo making and mainly the above bijou projects are individually done by me. Many of the projects couldn't include here because of space limitations but I've worked on all of these fields in my physics problem-based simulation and programming passage. Though all these are elementary projects, I've started from the very basics. </p>
 							</article>
 
 						<!-- Contact -->
